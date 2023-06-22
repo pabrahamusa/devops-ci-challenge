@@ -22,8 +22,10 @@ jobs:
     - name: Checkout Repo
       uses: actions/checkout@v1
 
-    - name: Install npm     
-      uses: actions/setup-node@v3     
+    - name: setup npm     
+      uses: actions/setup-node@v3
+      with:
+         node-version: 18     
 
     - name: Install npm
       id: fmt

@@ -37,17 +37,17 @@ jobs:
       run: cd rdicidr-0.1.0 &&  npm run lint
       continue-on-error: true
 
-       - name: npm prettier
+    - name: npm prettier
       id: fmt
       run: cd rdicidr-0.1.0 && npm run prettier
       continue-on-error: true
 
-      - name: npm Jest testcases
+    - name: npm Jest testcases
       id: fmt
       run: cd rdicidr-0.1.0 && CI=true && npm run test
       continue-on-error: true
 
-      - name: npm build
+    - name: npm build
       id: fmt
       run: cd rdicidr-0.1.0 && npm run build
       continue-on-error: true                

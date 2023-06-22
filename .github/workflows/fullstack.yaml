@@ -28,27 +28,27 @@ jobs:
          node-version: 15    
 
     - name: Install npm
-      id: fmt
+      id: install
       run: cd rdicidr-0.1.0 && npm install
       continue-on-error: true
 
     - name: npm lint
-      id: fmt
+      id: lint
       run: cd rdicidr-0.1.0 &&  npm run lint
       continue-on-error: true
 
     - name: npm prettier
-      id: fmt
+      id: prettier
       run: cd rdicidr-0.1.0 && npm run prettier
       continue-on-error: true
 
     - name: npm Jest testcases
-      id: fmt
+      id: testcases
       run: cd rdicidr-0.1.0 && CI=true && npm run test
       continue-on-error: true
 
     - name: npm build
-      id: fmt
+      id: buildnpm
       run: cd rdicidr-0.1.0 && npm run build
       continue-on-error: true                
       

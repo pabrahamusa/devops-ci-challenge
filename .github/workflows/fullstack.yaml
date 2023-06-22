@@ -39,7 +39,7 @@ jobs:
 
     - name: npm prettier
       id: prettier
-      run: cd rdicidr-0.1.0 && npm run prettier
+      run: cd rdicidr-0.1.0 && npm install --global prettier && npm run prettier
       continue-on-error: true
 
     - name: npm Jest testcases
